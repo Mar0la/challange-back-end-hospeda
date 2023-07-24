@@ -1,0 +1,63 @@
+//Criar evento
+POST http://localhost:3000/api/events
+Content-Type: application/json
+
+{
+  "informaçõesEvento": {
+    "nome": "",
+    "privado": true,
+    "descrição": "Maior evento de basquete do mundo"
+  },
+  "localEvento": {
+    "cep": 25900590,
+    "numero": 123123123,
+    "endereço": "Rua Alfredo 15",
+    "bairro": "Canal",
+    "cidade": "Rio de Janeiro",
+    "estado": "Rio de Janeiro"
+  },
+  "data": {
+   "dataInicio": "25/01/2024",
+  "horarioInicio": "15:12"
+  }
+}
+
+###
+
+//listar todos os eventos
+GET http://localhost:3000/api/events
+
+###
+
+// listar 1 evento pelo nome
+GET http://localhost:3000/api/events/REVOADA
+
+###
+
+// deletar pelo id
+DELETE http://localhost:3000/api/events/64bc644567ac540ac3849505
+
+###
+
+PUT http://localhost:3000/api/events/64bc639e57d0b7b0b43817e7
+Content-Type: application/json
+
+{
+  "informaçõesEvento": {
+    "nome": "jogadorcaro",
+    "privado": true,
+    "descrição": "Maior evento de basquete do mundo"
+  },
+  "localEvento": {
+    "cep": 25900590,
+    "numero": 123123123,
+    "endereço": "Rua 0007 da malazia 15",
+    "bairro": "Canal",
+    "cidade": "Rio de Janeiro",
+    "estado": "Rio de Janeiro"
+  },
+  "data": {
+   "dataInicio": "25/01/2024",
+  "horarioInicio": "15:12"
+  }
+}
